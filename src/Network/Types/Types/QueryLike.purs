@@ -6,7 +6,6 @@ module Network.HTTP.Types.QueryLike
 , SimpleQueryItem
 ) where
 
-import Data.List (List)
 import Data.Maybe (Maybe)
 import Data.Tuple (Tuple)
 
@@ -15,13 +14,13 @@ import Data.Tuple (Tuple)
 type QueryItem = Tuple String (Maybe String)
 
 -- | Query
-type Query = List QueryItem
+type Query = Array QueryItem
 
 -- | Like Query, but with 'Text' instead of 'B.ByteString' (UTF8-encoded).
-type QueryText = List (Tuple String (Maybe String))
+type QueryText = Array (Tuple String (Maybe String))
 
 -- | Simplified Query item type without support for parameter-less items.
 type SimpleQueryItem = Tuple String String
 
 -- | Simplified Query type without support for parameter-less items.
-type SimpleQuery = List SimpleQueryItem
+type SimpleQuery = Array SimpleQueryItem
