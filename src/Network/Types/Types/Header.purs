@@ -72,7 +72,6 @@ module Network.HTTP.Types.Header
 where
 
 import Data.Tuple (Tuple)
-import Data.List (List)
 
 -- | Header
 type Header = Tuple HeaderName String
@@ -84,7 +83,7 @@ type HeaderName = String
 type RequestHeaders = Array Header
 
 -- | Response Headers
-type ResponseHeaders = List Header
+type ResponseHeaders = Array Header
 
 -- | HTTP Header names according to http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html
 hAccept :: HeaderName
